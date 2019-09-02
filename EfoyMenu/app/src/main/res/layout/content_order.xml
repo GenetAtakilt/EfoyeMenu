@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f6e5"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_order" tools:context="com.example.yilma.efoymenu.OrderActivity">
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+        <!--android:text="Your Order"-->
+        <!--android:id="@+id/textView"-->
+        <!--android:layout_gravity="center_horizontal" />-->
+
+
+
+    <ImageView
+        android:layout_width="170dp"
+        android:layout_height="180dp"
+        android:scaleType="fitCenter"
+        android:id="@+id/orderedimg"
+        android:src="@drawable/saalad"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/orderedimg"
+        android:layout_toEndOf="@+id/orderedimg"
+        android:layout_marginTop="45dp">
+        <TextView
+            android:id="@+id/orderdname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#e58302"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_marginBottom="8dp"
+            android:text="Food Name"
+            android:textSize="25dp" />
+        <TextView
+            android:id="@+id/ordereddescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Roasted Chicken, Sun-Dried Tomatoes, and Caramelized Onions"
+            android:textSize="16dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ff0000"
+            android:text="Total price"
+            android:id="@+id/orderdprice"
+            android:textSize="17dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/orderedimg"
+        android:layout_centerHorizontal="true"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:paddingTop="10dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/name_et"
+            android:layout_gravity="center_horizontal"
+            android:hint="Name"
+            android:layout_marginTop="5dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:ems="10"
+            android:id="@+id/phone_et"
+            android:layout_gravity="center_horizontal"
+            android:hint="Phone Number"
+            android:layout_marginTop="5dp" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:id="@+id/location_et"
+            android:layout_gravity="center_horizontal"
+            android:hint="Location"
+            android:layout_marginTop="5dp" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancel Order in : "/>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner"
+                android:entries="@array/mins"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp" />
+        </LinearLayout>
+
+
+        <Button
+            android:textColor="#ffffffff"
+            android:background="@color/colorAccent"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Finish Order"
+            android:id="@+id/finishorder_button"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp" />
+    </LinearLayout>
+
+
+    <!--<LinearLayout-->
+        <!--android:orientation="vertical"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_centerHorizontal="true">-->
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+            <!--android:text="Your Order"-->
+            <!--android:id="@+id/textView"-->
+            <!--android:layout_gravity="center_horizontal" />-->
+
+    <!--</LinearLayout>-->
+</RelativeLayout>
